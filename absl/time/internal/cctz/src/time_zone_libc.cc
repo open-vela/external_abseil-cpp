@@ -223,10 +223,11 @@ time_zone::civil_lookup TimeZoneLibC::MakeTime(const civil_second& cs) const {
         civil_second() + ToUnixSeconds(time_point<seconds>::min());
     static const civil_second max_tp_cs =
         civil_second() + ToUnixSeconds(time_point<seconds>::max());
-    const time_point<seconds> tp = (cs < min_tp_cs) ? time_point<seconds>::min()
-                                   : (cs > max_tp_cs)
-                                       ? time_point<seconds>::max()
-                                       : FromUnixSeconds(cs - civil_second());
+    const time_point<seconds> tp =
+        (cs < min_tp_cs)
+            ? time_point<seconds>::min()
+            : (cs > max_tp_cs) ? time_point<seconds>::max()
+                               : FromUnixSeconds(cs - civil_second());
     return {time_zone::civil_lookup::UNIQUE, tp, tp, tp};
   }
 
