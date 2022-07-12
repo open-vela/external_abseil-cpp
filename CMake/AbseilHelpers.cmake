@@ -167,7 +167,8 @@ function(absl_cc_library)
         elseif(${cflag} MATCHES "^(-W|/w[1234eo])")
           # Don't impose our warnings on others.
         elseif(${cflag} MATCHES "^-m")
-          # Don't impose CPU instruction requirements on others, as the code performs feature detection on runtime.
+          # Don't impose CPU instruction requirements on others, as
+          # the code performs feature detection on runtime.
         else()
           set(PC_CFLAGS "${PC_CFLAGS} ${cflag}")
         endif()
