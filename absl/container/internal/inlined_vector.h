@@ -120,8 +120,8 @@ struct DestroyAdapter<A, /* IsTriviallyDestructible */ true> {
 
 template <typename A>
 struct Allocation {
-  Pointer<A> data = nullptr;
-  SizeType<A> capacity = 0;
+  Pointer<A> data;
+  SizeType<A> capacity;
 };
 
 template <typename A,
