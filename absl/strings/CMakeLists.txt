@@ -904,6 +904,7 @@ absl_cc_library(
     absl::cord_internal
     absl::strings
   TESTONLY
+  PUBLIC
 )
 
 # Internal-only target, do not depend on directly.
