@@ -101,8 +101,7 @@ inline void* DirectMmap(void* start, size_t length, int prot, int flags, int fd,
                  static_cast<size_t>(offset / pagesize));
 #else
   return reinterpret_cast<void*>(
-      syscall(SYS_mmap2, start, length, prot, flags, fd,
-              offset / pagesize));
+      syscall(SYS_mmap2, start, length, prot, flags, fd, offset / pagesize));
 #endif
 #elif defined(__s390x__)
   // On s390x, mmap() arguments are passed in memory.
