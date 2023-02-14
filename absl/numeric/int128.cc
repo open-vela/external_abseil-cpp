@@ -131,7 +131,7 @@ uint128 MakeUint128FromFloat(long double v) {
   return (static_cast<uint128>(w0) << 100) | (static_cast<uint128>(w1) << 50) |
          static_cast<uint128>(w2);
 }
-#endif  // __clang__ && !__SSE3__
+#endif  // __clang__ && (__clang_major__ < 9) && !__SSE3__
 }  // namespace
 
 uint128::uint128(float v) : uint128(MakeUint128FromFloat(v)) {}
