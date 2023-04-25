@@ -2457,7 +2457,7 @@ class raw_hash_set {
     const size_t cap = capacity();
     if (cap > Group::kWidth &&
         // Do these calculations in 64-bit to avoid overflow.
-        size() * uint64_t{32} <= cap* uint64_t{25}) {
+        size() * uint64_t{32} <= cap * uint64_t{25}) {
       // Squash DELETED without growing if there is enough capacity.
       //
       // Rehash in place if the current size is <= 25/32 of capacity.
