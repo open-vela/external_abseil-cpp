@@ -203,7 +203,8 @@ struct FloatTraits<float> {
     if (mantissa > kMantissaMask) {
       // Normal value.
       // Adjust by 127 for the exponent representation bias, and an additional
-      // 23 due to the implied decimal point in the IEEE mantissa representation.
+      // 23 due to the implied decimal point in the IEEE mantissa
+      // representation.
       flt += static_cast<uint32_t>(exponent + 127 + kTargetMantissaBits - 1)
              << 23;
       mantissa &= kMantissaMask;
