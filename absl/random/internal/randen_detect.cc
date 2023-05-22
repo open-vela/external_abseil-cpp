@@ -48,7 +48,7 @@
 #elif ABSL_HAVE_BUILTIN(__cpuid)
 // MSVC-equivalent __cpuid intrinsic declaration for clang-like compilers
 // for non-Windows build environments.
-void __cpuid(int[4], int);
+extern void __cpuid(int[4], int);
 #else
 // MSVC-equivalent __cpuid intrinsic function.
 static void __cpuid(int cpu_info[4], int info_type) {
