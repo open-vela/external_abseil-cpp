@@ -148,7 +148,7 @@ TEST(ThrowingValueTest, ThrowingBitwiseOps) {
   ThrowingValue<> bomb1, bomb2;
 
   TestOp([&bomb1]() { ~bomb1; });
-  TestOp([&]() { bomb1& bomb2; });
+  TestOp([&]() { bomb1 & bomb2; });
   TestOp([&]() { bomb1 | bomb2; });
   TestOp([&]() { bomb1 ^ bomb2; });
 }
