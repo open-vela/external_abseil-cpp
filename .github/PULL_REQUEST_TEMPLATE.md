@@ -1,8 +1,20 @@
-Thank you for your contribution to Abseil!
+*Note: Please adhere to [Contributing Guidelines](https://github.com/open-vela/docs/blob/dev/CONTRIBUTING.md).*
 
-Before submitting this PR, please be sure to read our [contributing
-guidelines](https://github.com/abseil/abseil-cpp/blob/master/CONTRIBUTING.md).
+## Summary
 
-If you are a Googler, please also note that it is required that you send us a
-Piper CL instead of using the GitHub pull-request process. The code propagation
-process will deliver the change to GitHub.
+*Update this section with information on why change is necessary,
+ what it exactly does and how, if new feature shows up, provide
+ references (dependencies, similar problems and solutions), etc.*
+
+## Impact
+
+*Update this section, where applicable, on how change affects users,
+ build process, hardware, documentation, security, compatibility, etc.*
+
+## Testing
+
+*Update this section with details on how did you verify the change,
+ what Host was used for build (OS, CPU, compiler, ..), what Target was
+ used for verification (arch, board:config, ..), etc. Providing build
+ and runtime logs from before and after change is highly appreciated.*
+
